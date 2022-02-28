@@ -2,6 +2,6 @@
 
 ## Repositorio con recopilación de diseños de botones con HTML, CSS y JS
 
-### Boton 7
+### Boton 8
 
-![Screenshot](Boton7.gif)
+![Screenshot](Boton8.gif)
