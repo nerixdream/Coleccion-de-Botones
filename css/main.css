@@ -1,7 +1,6 @@
 :root {
     --font-primary: 'Lato', sans-serif;
-    --color-primary: #282828;
-    --color-secondary: #ff4242;
+    --color-primary: #333645;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
@@ -30,20 +29,58 @@ body {
     background: var(--color-primary);
 }
 
-.main {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
+.box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.container {
-    max-width: 120rem;
-    margin: 0 auto;
+.btn {
+    background: none;
+    border: 2px solid #010001;
+    padding: 14px 30px;
+    display: block;
+    margin: 30px 0;
+    font-family: 'Roboto', serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    transition: color 0.4s linear;
+}
+
+.btn:hover {
+    color: #fff;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    background: #1088ff;
     height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: transform 0.5s;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
 }
 
-.title {
-    font-weight: 300;
-    font-size: 6rem;
-    color: var(--color-secondary);
+.btn1::before {
+    transform: scaleX(0);
+}
+
+.btn2::before {
+    transform: scaleY(0);
+}
+
+.btn1:hover::before {
+    transform: scaleX(1);
+}
+
+.btn2:hover::before {
+    transform: scaleY(1);
 }
