@@ -2,4 +2,6 @@
 
 ## Repositorio con recopilación de diseños de botones con HTML, CSS y JS
 
-![Screenshot](Cap.jpg)
+### Boton 3
+
+![Screenshot](Cap.gif)
