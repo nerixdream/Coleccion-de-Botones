@@ -1,7 +1,10 @@
 :root {
     --font-primary: 'Lato', sans-serif;
-    --color-primary: #282828;
-    --color-secondary: #ff4242;
+    --color-primary: #0f1e25;
+    --color-azul: #0074e4;
+    --color-verde: #59a173;
+    --color-rojo: #e58242;
+    --color-teal: teal;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
@@ -30,20 +33,61 @@ body {
     background: var(--color-primary);
 }
 
-.main {
-    min-height: 100vh;
+.contenedor {
+    height: 100vh;
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
-.container {
-    max-width: 120rem;
-    margin: 0 auto;
-    height: 100%;
+.contenedor .btn {
+    padding: 20px 40px;
+    margin-right: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 4px;
+    transition: all 0.5s;
+    position: relative;
 }
 
-.title {
-    font-weight: 300;
-    font-size: 6rem;
-    color: var(--color-secondary);
+.contenedor .btn:hover {
+    transform: translateY(-10px);
+}
+
+.contenedor .btn-azul {
+    background: var(--color-azul);
+}
+
+.contenedor .btn-verde {
+    background: var(--color-verde);
+}
+
+.contenedor .btn-rojo {
+    background: var(--color-rojo);
+}
+
+.contenedor .btn-teal {
+    background: var(--color-teal);
+    position: relative;
+    overflow: hidden;
+}
+
+.contenedor .btn-teal::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(255, 255, 255, 0.3);
+    transition: transform 1s;
+}
+
+.contenedor .btn-teal:hover {
+    background: #034646;
+}
+
+.contenedor .btn-teal:hover::before {
+    transform: translateX(102%);
 }
