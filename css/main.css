@@ -1,49 +1,69 @@
-:root {
-    --font-primary: 'Lato', sans-serif;
-    --color-primary: #282828;
-    --color-secondary: #ff4242;
-}
-
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
-
-html {
-    box-sizing: border-box;
-    font-size: 62.5%;
-}
-
-::selection {
-    background: #000;
-}
 
 *,
 *::after,
 *::before {
     margin: 0;
     padding: 0;
-    outline: none;
-    box-sizing: inherit;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
 }
 
 body {
-    font-family: var(--font-primary);
-    font-size: 1.6rem;
-    background: var(--color-primary);
-}
-
-.main {
+    background-color: #f2f2f2;
     min-height: 100vh;
     display: flex;
     align-items: center;
+    font-size: 1.6rem;
+    font-family: 'Lato', sans-serif;
 }
 
 .container {
     max-width: 120rem;
     margin: 0 auto;
-    height: 100%;
 }
 
-.title {
-    font-weight: 300;
-    font-size: 6rem;
-    color: var(--color-secondary);
+.btn-1 {
+    background-color: #ff4242;
+    color: #fff;
+    border-radius: 30px;
+    transition: all 0.25s ease;
+    padding: 1.5rem 3rem;
+    outline: none;
+    position: relative;
+    font-family: inherit;
+    font-size: 2.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-1:hover {
+    transform: translate(-12px, -12px);
+}
+
+.btn-1:hover::after {
+    transform: translate(6px, 6px);
+}
+
+.btn-1:hover::before {
+    transform: translate(12px, 12px);
+}
+
+.btn-1::after,
+.btn-1::before {
+    content: '';
+    position: absolute;
+    opacity: 0.3;
+    background-color: #ff4242;
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: all 0.25s ease;
 }
